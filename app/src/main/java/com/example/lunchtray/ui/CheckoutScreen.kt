@@ -16,7 +16,6 @@ import com.example.lunchtray.R
 import com.example.lunchtray.datasource.DataSource
 import com.example.lunchtray.model.MenuItem
 import com.example.lunchtray.model.OrderUiState
-import com.example.lunchtray.model.formatPrice
 
 @Composable
 fun CheckoutScreen(

@@ -23,7 +23,9 @@ fun EntreeMenuScreen(
     BaseMenuScreen(
         options = options,
         onCancelButtonClicked = onCancelButtonClicked,
-        onNextButtonClicked = onNextButtonClicked,
+        onNextButtonClicked = {
+            navController.navigate(LunchTrayScreen.SideDish.name)
+        },
         onSelectionChanged = onSelectionChanged as (MenuItem) -> Unit,
         modifier = modifier
     )

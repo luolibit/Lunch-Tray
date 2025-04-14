@@ -24,7 +24,7 @@ fun SideDishMenuScreen(
         options = options,
         onCancelButtonClicked = onCancelButtonClicked,
         onNextButtonClicked = onNextButtonClicked,
-        onSelectionChanged = onSelectionChanged as (MenuItem) -> Unit,
+        onSelectionChanged = { item -> onSelectionChanged(item as SideDishItem) },
         modifier = modifier
     )
 }

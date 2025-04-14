@@ -51,20 +51,15 @@ fun LunchTrayAppBar(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LunchTrayApp() {
-    val navController = rememberNavController()
-    val backStackEntry by navController.currentBackStackEntryAsState()
+    fun LunchTrayApp() {
 
+        val navController = rememberNavController()
 
-    val currentScreen = try {
-        if (backStackEntry?.destination?.route != null)
-            LunchTrayScreen.valueOf(backStackEntry!!.destination.route)
-        else
-            LunchTrayScreen.Start
-    } catch (e: IllegalArgumentException) {
-        LunchTrayScreen.Start
-    }
+        val backStackEntry by navController.currentBackStackEntryAsState()
 
+        val currentScreen = LunchTrayScreen.valueOf(
+            backStackEntry?.destination?.route ?: LunchTrayScreen.Start.name
+        )
 
     val viewModel: OrderViewModel = viewModel()
 
