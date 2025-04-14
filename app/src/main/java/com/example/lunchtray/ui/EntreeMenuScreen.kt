@@ -30,7 +30,7 @@ fun EntreeMenuScreen(
         modifier = modifier
     )
 }
-
+/
 @Preview(showBackground = true)
 @Composable
 fun EntreeMenuPreview(){
